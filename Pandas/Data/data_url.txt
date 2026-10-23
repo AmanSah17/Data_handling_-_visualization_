@@ -1,0 +1,36 @@
+TITANIC_DATASET = "https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv"
+
+CALIFORNIA_HOUSING = "https://raw.githubusercontent.com/ageron/handson-ml2/master/datasets/housing/housing.csv"
+OPEN_METRO = "https://api.open-meteo.com/v1/forecast"
+
+
+
+
+
+
+
+"""
+
+
+import pandas as pd
+import requests
+
+url = "https://api.open-meteo.com/v1/forecast"
+
+params = {
+    "latitude": 22.99,      # Kolkata area
+    "longitude": 88.39,
+    "hourly": "temperature_2m,relative_humidity_2m,wind_speed_10m",
+    "timezone": "Asia/Kolkata",
+    "forecast_days": 7
+}
+
+response = requests.get(url, params=params)
+response.raise_for_status()
+
+data = response.json()["hourly"]
+df = pd.DataFrame(data)
+df["time"] = pd.to_datetime(df["time"])
+
+print(df.head())
+"""
